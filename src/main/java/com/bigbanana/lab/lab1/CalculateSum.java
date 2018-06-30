@@ -6,6 +6,11 @@ import org.junit.Test;
 public class CalculateSum {
 
 
+	/**
+	 * 给定一个Integer 数组，计算这个数组的和
+	 * @param numbers
+	 * @return
+	 */
 	public static long sum(Integer... numbers){
 		return Long.MAX_VALUE;
 	}
