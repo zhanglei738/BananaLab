@@ -1,13 +1,12 @@
-package com.bigbanana.lab.lab1.dajiao;
+package com.littlewhite.lab.lab1.xb;
 
-import org.junit.Assert;
 import org.junit.Test;
 
-public class demo extends com.bigbanana.lab.lab1.CalculateSum{
+public class demo extends com.littlewhite.lab.lab1.CalculateSum{
 
 
 	@Override
-	public  long sum(Integer... numbers){
+	public long sum(Integer... numbers){
 		return numbers.length;
 	}
 
@@ -16,6 +15,5 @@ public class demo extends com.bigbanana.lab.lab1.CalculateSum{
 		demo demo = new demo();
 		super.test(demo);
 	}
-
 
 }

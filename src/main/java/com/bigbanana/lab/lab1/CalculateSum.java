@@ -29,12 +29,6 @@ public abstract class CalculateSum {
 		Assert.assertEquals(calculateSum.sum(test2),Long.valueOf(Integer.MAX_VALUE+10).longValue());
 
 
-
-
-
-
-
-
 	}
 
 
