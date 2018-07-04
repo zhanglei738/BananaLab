@@ -11,7 +11,7 @@ public class demo extends com.bigbanana.lab.lab1.CalculateSum{
 		return numbers.length;
 	}
 
-	@Test
+	//@Test
 	public void myTest(){
 		demo demo = new demo();
 		super.test(demo);

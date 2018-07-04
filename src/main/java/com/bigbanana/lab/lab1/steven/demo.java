@@ -1,4 +1,4 @@
-package steven.seven.lab.lab1;
+package com.bigbanana.lab.lab1.steven;
 
 import org.junit.Test;
 
