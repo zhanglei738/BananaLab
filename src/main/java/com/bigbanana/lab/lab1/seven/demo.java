@@ -1,4 +1,4 @@
-package com.bigbanana.lab.lab1.steven;
+package com.bigbanana.lab.lab1.seven;
 
 import org.junit.Test;
 
