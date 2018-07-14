@@ -10,15 +10,17 @@ import java.util.stream.Stream;
 public class demo extends com.bigbanana.lab.lab1.CalculateSum{
 
 
-	long sum = 0;
+
 	@Override
 	public  long sum(Integer... numbers){
-
+		long sum = 0;
 		if(numbers.length != 0){
+
 			for (Integer sum_: numbers ) {
 				sum += sum_;
 			}
 		}
+
 		return sum;
 	}
 
