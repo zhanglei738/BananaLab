@@ -4,7 +4,7 @@ public interface SpringBootInActionHelloService {
 
 	/**
 	 * 需要实现的方法
-	 * @param worlds
+	 * @param
 	 * @return
 	 */
 	String sayHello();
