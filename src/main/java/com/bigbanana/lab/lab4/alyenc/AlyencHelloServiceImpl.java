@@ -16,6 +16,9 @@ public class AlyencHelloServiceImpl implements SpringBootInActionHelloService {
 
     @Override
     public String sayHello() {
-        return "lab4写完了，哈哈哈哈哈哈哈哈哈哈嗝～";
+        return  "<div align=\"center\">\n" +
+                "    <img src=\"/images/djqrcode.png\" alt=\"ast\"  />\n" +
+                "    <p>微信扫一扫，有惊喜</p>\n" +
+                "</div>";
     }
 }
