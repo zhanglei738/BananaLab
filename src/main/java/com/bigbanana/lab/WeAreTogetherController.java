@@ -25,6 +25,8 @@ public class WeAreTogetherController {
             result.append(springBootInActionHelloService.sayHello());
         }
 
+
+
         return result.toString();
     }
 }
