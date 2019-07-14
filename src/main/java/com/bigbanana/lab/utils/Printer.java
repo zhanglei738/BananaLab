@@ -39,4 +39,27 @@ public class Printer<V> {
     }
 
 
+    public static void printArray(int[] array){
+        if(array == null){
+            return;
+        }
+        if(array.length==0){
+            return;
+        }
+
+        print("[");
+
+        for(int i = 0 ; i < array.length ; i ++){
+            print(array[i]);
+            if(i != array.length - 1){
+                print(",");
+            }
+
+        }
+
+        print("]");
+
+    }
+
+
 }
