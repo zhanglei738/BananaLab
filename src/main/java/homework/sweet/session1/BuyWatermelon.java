@@ -36,7 +36,6 @@ public class BuyWatermelon {
 
     public static int sell0(int tmp) throws Exception{
         if (tmp < 0){
-            tmp = 0;
             throw new Exception("数量不合格");
         }
         if (tmp > 50) {
