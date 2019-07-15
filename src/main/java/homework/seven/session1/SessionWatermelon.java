@@ -40,11 +40,12 @@ public class SessionWatermelon {
    * @return 卖给每位客户的西瓜数量
    */
   private static int[] sell(int[] buyNum) {
-    int buyerNumber = buyNum.length;
-    if (buyerNumber == 0) {
+    if (null == buyNum || buyNum.length == 0) {
       return new int[0];
     }
-
+    
+    int buyerNumber = buyNum.length;
+    
     // 售卖计划
     int[] sellPlan = new int[buyerNumber];
     int totalSell = 0;
