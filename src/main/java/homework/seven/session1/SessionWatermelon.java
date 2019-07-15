@@ -15,9 +15,9 @@ package homework.seven.session1;
  *
  * 5、如果需求小于0个，sell0 抛出异常，在 sell 捕获异常并登记为不卖（卖0）。
  *
- * 5、在控制台打印出最终这批卖出去多少个。术语：xxx总共卖出去N个。
+ * 6、在控制台打印出最终这批卖出去多少个。术语：xxx总共卖出去N个。
  *
- * 6、实现自己的打印数组函数。格式: [1,2,3,4,5];
+ * 7、实现自己的打印数组函数。格式: [1,2,3,4,5];
  *
  * @author Seven-Steven
  * @date 2019-07-15 00:18
@@ -29,9 +29,16 @@ public class SessionWatermelon {
   private static int MAX_SELL_PER = 50;
 
   public static void main(String[] args) {
+    // 测试卖瓜程序
     int[] buyNum = {1, -1, 70, 0, 2};
     int[] result = sell(buyNum);
     printArray(result);
+    // 测试空指针
+    result = sell(null);
+    printArray(result);
+
+    // 测试数组打印方法
+    printArray(null);
   }
 
   /**
@@ -49,9 +56,11 @@ public class SessionWatermelon {
     // 售卖计划
     int[] sellPlan = new int[buyerNumber];
     int totalSell = 0;
+
+    int current;
+    int sellNumber;
     for (int i = 0; i < buyerNumber; i++) {
-      int current = buyNum[i];
-      int sellNumber;
+      current = buyNum[i];
       try {
         sellNumber = sell0(current);
       } catch (Exception e) {
@@ -89,11 +98,20 @@ public class SessionWatermelon {
    * @param array 整型数组
    */
   private static void printArray(int[] array) {
+    if (null == array) {
+      System.out.println("[]");
+      return;
+    }
+
     StringBuilder result = new StringBuilder().append('[');
     for (Object o : array) {
       result.append(o).append(',');
     }
-    result.deleteCharAt(result.length() - 1);
+
+    if (result.length() > 1) {
+      result.deleteCharAt(result.length() - 1);
+    }
+
     result.append(']');
     System.out.println(result);
   }
