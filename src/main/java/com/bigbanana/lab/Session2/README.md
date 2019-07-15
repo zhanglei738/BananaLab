@@ -57,7 +57,9 @@ public interface Stack {
 
 ```
 1、StackImpl 实现 Stack 为实现一个栈，要求存储的结构为 int[] 数组，目的为理解封装这个概念。
+
 2、StackWithLogImpl 实现一个栈，继承StackImpl，并在处理前后打出日志，目的为理解继承这个概念。
+
 3、回答出下面这几行代码的表现以及背后的原因，为什么同一个接口会有不同的表现，是怎么实现的。
 ```java
 Stack stack1 = new StackImpl();
