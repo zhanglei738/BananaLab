@@ -6,14 +6,14 @@
 
 <https://www.runoob.com/java/java-tutorial.html>
 
-2、栈是一个有序集合，其中添加和删除元素都是发生在同一端，通常称作发生操作的这一端为顶部，对应的端为底部
+<https://www.cnblogs.com/UncleWang001/articles/9717318.html>
+
+PS:栈是一个有序集合，其中添加和删除元素都是发生在同一端，通常称作发生操作的这一端为顶部，对应的端为底部
 
 
 ### 主要关注内容
 数据结构中栈的原理
 Java 面向对象
-
-
 
 ### 作业
 
