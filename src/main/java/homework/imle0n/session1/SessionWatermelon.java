@@ -1,7 +1,5 @@
 package homework.imle0n.session1;
 
-import java.util.Arrays;
-
 /**
  * @author iMLe0n
  * @version 1.0.0
@@ -13,7 +11,17 @@ public class SessionWatermelon {
     public static void main(String[] args) {
         int[] nums1 = {-1, 0, 10, 51};
         int[] sell = sell(nums1);
-        System.out.println(Arrays.toString(sell));
+
+        StringBuilder stringBuilder = new StringBuilder("[");
+        for (int i = 0; i < sell.length; i++) {
+            if (i == 0) {
+                stringBuilder.append(sell[i]);
+            } else {
+                stringBuilder.append(",").append(sell[i]);
+            }
+        }
+        stringBuilder.append("]");
+        System.out.println(stringBuilder.toString());
     }
 
     public static int[] sell(int[] buyNum) {
