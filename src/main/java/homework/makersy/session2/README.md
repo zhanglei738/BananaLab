@@ -68,5 +68,11 @@ stack1.push(2);
 stack2.push(2);
 ```
 
-
+答：
+代码结果为：
+```java
+Before homework.makersy.session2.StackWithLogImpl@15975490 push
+After homework.makersy.session2.StackWithLogImpl@15975490 push
+```
+同一个Stack接口有着不同的表现，这正是因为Java的多态性，由于有多个类实现了Stack接口，这些不同的类所生成的对象内部的属性和方法都是本类所定义的，因此同一个接口可以有着不同的实现。这里的实现方法就是 StackImpl 类实现了 Stack 接口，实现了其中定义的所有方法；然后 StackWithLogImpl 类继承 StackImpl 类，重写了父类的方法，重写方式是：功能的实现直接采用 super 调用父类的方法，然后在调用前和调用后分别打印日志。
 
