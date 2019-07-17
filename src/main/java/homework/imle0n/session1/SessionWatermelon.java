@@ -11,17 +11,7 @@ public class SessionWatermelon {
     public static void main(String[] args) {
         int[] nums1 = {-1, 0, 10, 51};
         int[] sell = sell(nums1);
-
-        StringBuilder stringBuilder = new StringBuilder("[");
-        for (int i = 0; i < sell.length; i++) {
-            if (i == 0) {
-                stringBuilder.append(sell[i]);
-            } else {
-                stringBuilder.append(",").append(sell[i]);
-            }
-        }
-        stringBuilder.append("]");
-        System.out.println(stringBuilder.toString());
+        arrayPrint(sell);
     }
 
     public static int[] sell(int[] buyNum) {
@@ -58,6 +48,19 @@ public class SessionWatermelon {
             return MaxNum;
         }
         return buyNum;
+    }
+
+    private static void arrayPrint(int[] array) {
+        StringBuilder stringBuilder = new StringBuilder("[");
+        for (int i = 0; i < array.length; i++) {
+            if (i == 0) {
+                stringBuilder.append(array[i]);
+            } else {
+                stringBuilder.append(",").append(array[i]);
+            }
+        }
+        stringBuilder.append("]");
+        System.out.println(stringBuilder.toString());
     }
 
 }
