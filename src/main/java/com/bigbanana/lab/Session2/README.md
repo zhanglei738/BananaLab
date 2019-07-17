@@ -19,6 +19,11 @@ Java 面向对象
 
 #### 目标：实现一个栈，和实现一个带日志输出的栈
 
+带日志输出的栈：在所有操作的前面打出日志，以push为例子
+System.out.println("start push");
+结束的时候
+System.out.println("end push");
+
 
 ```java
 public interface Stack {
@@ -27,7 +32,7 @@ public interface Stack {
 	 * 入栈
 	 * @return
 	 */
-	int push();
+	boolean push();
 
 	/**
 	 * 出栈
@@ -51,7 +56,7 @@ public interface Stack {
 	 * 栈是否为空
 	 * @return
 	 */
-	int isEmpty();
+	boolean isEmpty();
 
 }
 
