@@ -1,6 +1,8 @@
 package homework.makersy.session2;
 
 
+import org.junit.Test;
+
 import java.util.EmptyStackException;
 
 /*
@@ -69,7 +71,8 @@ public class StackImpl implements Stack{
         return index == -1;
     }
 
-    public static void main(String[] args) {
+    @Test
+    public static void test(String[] args) {
         Stack stack = new StackImpl();
         for (int i = 0; i < 64; i++) {
             stack.push(i);

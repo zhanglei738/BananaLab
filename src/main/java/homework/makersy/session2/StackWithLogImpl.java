@@ -1,5 +1,7 @@
 package homework.makersy.session2;
 
+import org.junit.Test;
+
 import java.util.EmptyStackException;
 
 /*
@@ -65,7 +67,8 @@ public class StackWithLogImpl extends StackImpl{
     }
 
 
-    public static void main(String[] args) {
+    @Test
+    public static void test(String[] args) {
         Stack stack1 = new StackImpl();
         Stack stack2 = new StackWithLogImpl();
         stack1.push(2);
