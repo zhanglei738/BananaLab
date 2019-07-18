@@ -24,70 +24,71 @@ import java.util.function.IntPredicate;
  *		空
  */
 public	class SessionWatermelon	{ 
-	static int sum = 0;
 	public	static void	main(String[]	args) throws IOException	{    
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(System.out));
 		String line = reader.readLine().trim();
-		System.out.println("======>日志<=========");
-		if(line.length() <= 0) {
-			System.out.println("======>结果<=========");
-			System.out.println("出售记录: "+Arrays.toString(new int[0]));
-			System.out.println("共卖出去"+sum+"个");
-		}else {
-			String[] data = line.split(" ");
-			int len = data.length;
-			
-			int[] buyNum = new int[data.length];
-			for(int i = 0; i < buyNum.length; i ++) {
-				buyNum[i] = Integer.parseInt(data[i]);
-			} 
-			int[] res = sell(buyNum);
-			System.out.println("======>结果<=========");
-			System.out.println("出售记录: "+Arrays.toString(res));
-			System.out.println("共卖出去"+sum+"个");
+		String[] data = line.split(" ");
+		int len = data.length;
+		if (line.length() <= 0) {
+			len=0;
 		}
+		int[] buyNum = new int[len];
+		for(int i = 0; i < buyNum.length; i ++) {
+			buyNum[i] = Integer.parseInt(data[i]);
+		} 
+		int[] res = sell(buyNum);
+		System.out.println("售出记录:"+printArrays(res));
 		reader.close();
 		writer.close();
 	}    
 	public	static	int[]	sell(int[]	buyNum){  
+		int sum = 0;
+		if(buyNum.length <= 0) {
+			System.out.println("共卖出去"+sum+"个");
+			return new int[0];
+		}
 		int num[] = new int[buyNum.length];
 		for(int i = 0; i < buyNum.length; i ++) {
 			int s = 0;
 			try {
 				 s = sell0(buyNum[i]);
-			} catch (Exception e) {
-				// TODO: handle exception
-				if (buyNum[i] < 0) {
-					s = 0;
-					System.out.println("第"+i+"个顾客需求小于0 : "+e);
-				}else {
-					s = 50;
-					System.out.println("第"+i+"个顾客需求大于50 : "+e);
-				}
+			} catch (NegativeException e) {
+				System.out.println(e);
 			} finally {
+				if(s > 50) {
+					s = 50;
+				}
 				sum += s;
 				num[i] = s;
 			}
 		}
+		System.out.println("共卖出去"+sum+"个");
 		return	num;     
 	}    
-	private static	int sell0(int	buyNum) throws MyException{
+	private static	int sell0(int	buyNum) throws NegativeException {
 		if(buyNum < 0) {
-			throw new MyException("卖出0!");
-		}else if (buyNum > 50) {
-			throw new MyException("超过50!");
+			throw new NegativeException("卖出0!");
 		}
 		return	buyNum;       
 	}    
+	private static String printArrays(int[] arr) {
+		if(arr.length <= 0) {
+			return "[]";
+		}
+		String res = "";
+		for(int a : arr) {
+			res += a +",";
+		}
+		return "["+res.substring(0, res.length() - 1) +"]";
+	}
 }
-class  MyException extends RuntimeException {
-
+class  NegativeException extends RuntimeException {
 	/**
 	 *  小于0 的异常
 	 */
 	private static final long serialVersionUID = 1L;
-	public MyException(String message) {
+	public NegativeException(String message) {
 		super(message);
 		// TODO Auto-generated constructor stub
 	}
