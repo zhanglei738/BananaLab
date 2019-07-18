@@ -19,7 +19,12 @@ Java 面向对象
 
 #### 目标：实现一个栈，和实现一个带日志输出的栈
 
-带日志输出的栈：在所有操作的前面打出日志，以push为例子
+1、使用int[] 存储
+2、如果栈满了，扩容2倍。
+3、如果栈为空 pop 和 peak 抛异常。
+
+
+ps:带日志输出的栈：在所有操作的前面打出日志，以push为例子
 System.out.println("start push");
 结束的时候
 System.out.println("end push");
@@ -30,13 +35,13 @@ public interface Stack {
 
 	/**
 	 * 入栈
-	 * @return
+	 * @return boolean
 	 */
-	boolean push();
+	boolean push(int value);
 
 	/**
 	 * 出栈
-	 * @return
+	 * @return int
 	 */
 	int pop();
 
