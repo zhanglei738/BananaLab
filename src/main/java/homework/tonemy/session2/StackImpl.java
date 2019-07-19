@@ -1,4 +1,4 @@
-import java.util.Arrays;
+﻿import java.util.Arrays;
 import java.util.function.IntPredicate;
 
 public class StackImpl implements Stack {
@@ -21,7 +21,7 @@ public class StackImpl implements Stack {
 	public int pop()  {
 		// TODO Auto-generated method stub
 		if(cur == -1) {
-				throw new StackUnderFlow("ջΪ��");
+				throw new StackUnderFlow("栈为空");
 		}
 		int top = arr[cur];
 		cur --;
@@ -32,7 +32,7 @@ public class StackImpl implements Stack {
 	public int peak() {
 		// TODO Auto-generated method stub
 		if(cur == -1) {
-			throw new StackUnderFlow("ջΪ��");
+			throw new StackUnderFlow("栈为空");
 		}
 		int top = arr[cur];
 		return top;
