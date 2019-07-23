@@ -4,7 +4,11 @@
 
 ### 学习资料
 
-<https://blog.csdn.net/thousa_ho/article/details/72842029> 字符串匹配算法，自己先思考，再点连接看
+<https://blog.csdn.net/thousa_ho/article/details/72842029> 字符串匹配算法，自己先思考，再点链接看
+
+
+<https://blog.csdn.net/lwkrsa/article/details/82015364>   单链表翻转
+
 
 JDK 源码 String 类
 
